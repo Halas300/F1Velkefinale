@@ -1,6 +1,6 @@
-package Příkazy;
+package Prikazy;
 
-public interface Příkaz {
+public interface Prikaz {
 
     void proved(String[] parametry);
 

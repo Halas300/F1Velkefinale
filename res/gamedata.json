@@ -1,0 +1,116 @@
+{
+  "Veci": [
+    {
+      "id": "item_helma",
+      "nazev": "Helma",
+      "typ": "GEAR",
+      "popis": "Tvoje závodní helma. Bez ní nemůžeš závodit."
+    },
+    {
+      "id": "item_rukavice",
+      "nazev": "Rukavice",
+      "typ": "GEAR",
+      "popis": "Ohnivzdorné rukavice. Bez nich nemůžeš závodit."
+    },
+    {
+      "id": "item_naradi",
+      "nazev": "Nářadí",
+      "typ": "TOOL",
+      "popis": "Nářadí potřebné k opravě volantu."
+    },
+    {
+      "id": "item_disk",
+      "nazev": "USB Disk",
+      "typ": "DATA",
+      "popis": "Disk s telemetrickými daty."
+    }
+  ],
+  "NPC": [
+    {
+      "id": "npc_james",
+      "jmeno": "James",
+      "role": "ENGINEER",
+      "domovskaLokace": "loc_garaz",
+      "poznamky": "Tvůj inženýr."
+    },
+    {
+      "id": "npc_max",
+      "jmeno": "Max",
+      "role": "RIVAL",
+      "domovskaLokace": "loc_paddock",
+      "poznamky": "Tvůj největší soupeř."
+    },
+    {
+      "id": "npc_christian",
+      "jmeno": "Christian",
+      "role": "Šéf týmu",
+      "domovskaLokace": "loc_vip",
+      "poznamky": "Šéf týmu. Rozhoduje o všem."
+    },
+    {
+      "id": "npc_sarah",
+      "jmeno": "Sarah",
+      "role": "PR",
+      "domovskaLokace": "loc_media",
+      "poznamky": "Tisková mluvčí."
+    }
+  ],
+  "Mistnosti": [
+    {
+      "id": "loc_motorhome",
+      "nazev": "Motorhome",
+      "popis": "Tvůj soukromý pokoj.",
+      "soused": ["loc_paddock"],
+      "veciVMistnosti": ["item_helma", "item_rukavice"]
+    },
+    {
+      "id": "loc_paddock",
+      "nazev": "Paddock",
+      "popis": "Střed okruhu. Odtud se dostaneš kamkoliv.",
+      "soused": ["loc_motorhome", "loc_garaz", "loc_sklad", "loc_tech", "loc_media", "loc_vip", "loc_pitlane"],
+      "veciVMistnosti": []
+    },
+    {
+      "id": "loc_garaz",
+      "nazev": "Garáž Feriri",
+      "popis": "Zde je auto a mechanici.",
+      "soused": ["loc_paddock"],
+      "veciVMistnosti": []
+    },
+    {
+      "id": "loc_sklad",
+      "nazev": "Sklad dílů",
+      "popis": "Místnost se všemi díly.",
+      "soused": ["loc_paddock"],
+      "veciVMistnosti": ["item_naradi"]
+    },
+    {
+      "id": "loc_tech",
+      "nazev": "Technické centrum",
+      "popis": "Místnost plná serverů a monitorů.",
+      "soused": ["loc_paddock"],
+      "veciVMistnosti": ["item_disk"]
+    },
+    {
+      "id": "loc_media",
+      "nazev": "Media Center",
+      "popis": "Místnost plná novinářů a kamer.",
+      "soused": ["loc_paddock"],
+      "veciVMistnosti": []
+    },
+    {
+      "id": "loc_vip",
+      "nazev": "VIP Lounge",
+      "popis": "Luxusní bar pro hosty.",
+      "soused": ["loc_paddock"],
+      "veciVMistnosti": []
+    },
+    {
+      "id": "loc_pitlane",
+      "nazev": "Pit Lane",
+      "popis": "Boxová ulička. Odtud se vyjíždí na trať.",
+      "soused": ["loc_paddock"],
+      "veciVMistnosti": []
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-package Příkazy;
+package Prikazy;
 
-public class PříkazNastav implements Příkaz {
+public class PrikazNastav implements Prikaz {
 
     @Override
     public String getNazev() {
