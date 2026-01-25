@@ -19,5 +19,4 @@ public class Mistnosti {
     public String getPopis(){
         return popis;
     }
-
 }

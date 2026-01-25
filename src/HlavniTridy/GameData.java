@@ -10,9 +10,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class GameData {
-    public ArrayList<Veci> veci;
-    public ArrayList<NPC> npc;
-    public ArrayList<Mistnosti> mistnosti;
+    public ArrayList<Veci> Veci;
+    public ArrayList<NPC> Npc;
+    public ArrayList<Mistnosti> Mistnosti;
 
     public static GameData nactiData (String resourcePath) {
         Gson gson = new Gson();
@@ -27,7 +27,7 @@ public class GameData {
     }
 
     public Mistnosti najdiMistnost(String id) {
-        for (Mistnosti l : mistnosti) {
+        for (Mistnosti l : Mistnosti) {
             if (l.getId().equals(id)) {
                 return l;
             }
@@ -36,7 +36,7 @@ public class GameData {
     }
 
     public Veci NajdiVec(String id) {
-        for (Veci i : veci) {
+        for (Veci i : Veci) {
             if (i.getId().equals(id)) return i;
         }
         return null;
