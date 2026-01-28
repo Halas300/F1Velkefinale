@@ -23,6 +23,12 @@
       "nazev": "USB Disk",
       "typ": "DATA",
       "popis": "Disk s telemetrickými daty."
+    },
+    {
+      "id": "item_tablet",
+      "nazev": "Tablet",
+      "typ": "DATA",
+      "popis": "Slouží k získání informací pro závod"
     }
   ],
   "NPC": [
@@ -67,21 +73,21 @@
       "id": "loc_paddock",
       "nazev": "Paddock",
       "popis": "Střed okruhu. Odtud se dostaneš kamkoliv.",
-      "soused": ["loc_motorhome", "loc_garaz", "loc_sklad", "loc_tech", "loc_media", "loc_vip", "loc_pitlane"],
+      "soused": ["loc_motorhome", "loc_garaz", "loc_tech", "loc_media1", "loc_media2", "loc_vip"],
       "veciVMistnosti": []
     },
     {
       "id": "loc_garaz",
       "nazev": "Garáž Feriri",
       "popis": "Zde je auto a mechanici.",
-      "soused": ["loc_paddock"],
-      "veciVMistnosti": []
+      "soused": ["loc_paddock", "loc_sklad", "loc_pitlane"],
+      "veciVMistnosti": ["item_tablet"]
     },
     {
       "id": "loc_sklad",
       "nazev": "Sklad dílů",
       "popis": "Místnost se všemi díly.",
-      "soused": ["loc_paddock"],
+      "soused": ["loc_garaz"],
       "veciVMistnosti": ["item_naradi"]
     },
     {
@@ -92,8 +98,15 @@
       "veciVMistnosti": ["item_disk"]
     },
     {
-      "id": "loc_media",
+      "id": "loc_media1",
       "nazev": "Media Center",
+      "popis": "Místnost plná novinářů a kamer.",
+      "soused": ["loc_paddock"],
+      "veciVMistnosti": []
+    },
+    {
+      "id": "loc_media2",
+      "nazev": "After race media Center",
       "popis": "Místnost plná novinářů a kamer.",
       "soused": ["loc_paddock"],
       "veciVMistnosti": []
@@ -109,7 +122,7 @@
       "id": "loc_pitlane",
       "nazev": "Pit Lane",
       "popis": "Boxová ulička. Odtud se vyjíždí na trať.",
-      "soused": ["loc_paddock"],
+      "soused": ["loc_garaz"],
       "veciVMistnosti": []
     }
   ]

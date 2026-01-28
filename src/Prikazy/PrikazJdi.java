@@ -30,8 +30,7 @@ public class PrikazJdi implements Prikaz {
             }
         }
         if (!naselJsem) {
-            System.out.println("1. Odtud cesta nevede");
-            System.out.println("2. Špatně zadaný příkaz");
+            System.out.println("Někde nastala chyba, bud si napsal špatně příkaz nebo odtud nevede cesta");
         }
     }
 }
