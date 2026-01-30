@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class GameData {
     public ArrayList<Veci> Veci;
-    public ArrayList<NPC> Npc;
+    public ArrayList<NPC> NPC;
     public ArrayList<Mistnosti> Mistnosti;
 
     public static GameData nactiData (String resourcePath) {

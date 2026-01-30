@@ -42,6 +42,7 @@ public class Hra {
         seznamPrikazu.add(new PrikazMluv());
         seznamPrikazu.add(new PrikazNastav());
         seznamPrikazu.add(new PrikazPouzij());
+        seznamPrikazu.add(new PrikazProzkoumej());
     }
 
     private void zpracujPrikaz(String radek) {
