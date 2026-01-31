@@ -44,5 +44,16 @@ public class PrikazPouzij implements Prikaz {
                 System.out.println("Auto už je opravené.");
             }
         }
+
+        else if (idVeci.equals("item_disk") && idMistnost.equals("loc_tech")) {
+            if (!StavHrace.dataStazena) {
+                System.out.println("Použil jsi disk na získání dat");
+                System.out.println("Data se stahují...");
+                System.out.println("Dle dat z treninku je doporučené nastavit křídla na 7 stupen");
+                StavHrace.dataStazena = true;
+            } else {
+                System.out.println("Data už máš stažená");
+            }
+        }
     }
 }
