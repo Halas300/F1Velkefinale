@@ -55,5 +55,13 @@ public class PrikazPouzij implements Prikaz {
                 System.out.println("Data už máš stažená");
             }
         }
+
+        else if (idVeci.equals("item_tablet")) {
+            System.out.println("Koukáš na tablet. Předpověď počasí je slunečnno. Teplota bude cca 30 a šance na déšt je malá");
+            System.out.println("Doporučujeme nejdříve stáhnout data z disku pro zjištění nejlepší strategie");
+            if (StavHrace.dataStazena) {
+                System.out.println("Doporučená strategie je startovat na soft a poté přezout na medium");
+            }
+        }
     }
 }
