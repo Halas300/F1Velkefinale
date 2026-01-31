@@ -34,5 +34,15 @@ public class PrikazPouzij implements Prikaz {
         String idVeci = vecKPouziti.getId();
         String idMistnost = Hra.aktualniLokace.getId();
 
+        if (idVeci.equals("item_naradi") && idMistnost.equals("loc_garaz")) {
+            if (!StavHrace.autoOpraveno) {
+                System.out.println("Použil jsi nářadí k opravě auta.");
+                System.out.println("Auto se opravuje...");
+                System.out.println("Auto bylo úspěšně opraveno");
+                StavHrace.autoOpraveno = true;
+            } else {
+                System.out.println("Auto už je opravené.");
+            }
+        }
     }
 }
