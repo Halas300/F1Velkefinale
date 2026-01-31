@@ -1,4 +1,7 @@
 package Prikazy;
+import HlavniTridy.Hra;
+import HlavniTridy.StavHrace;
+import PridaneVeci.Veci;
 
 public class PrikazPouzij implements Prikaz {
 
@@ -14,6 +17,22 @@ public class PrikazPouzij implements Prikaz {
             return;
         }
 
-        String nazev = parametry[1];
+        String nazev = parametry[1].toLowerCase();
+        Veci vecKPouziti = null;
+        for (Veci v : StavHrace.batoh) {
+            if (v.getNazev().toLowerCase().contains(nazev)) {
+                vecKPouziti = v;
+                break;
+            }
+        }
+
+        if (vecKPouziti == null) {
+            System.out.println("Tuhle věc nemáš v batohu");
+            return;
+        }
+
+        String idVeci = vecKPouziti.getId();
+        String idMistnost = Hra.aktualniLokace.getId();
+
     }
 }
