@@ -52,12 +52,17 @@ public class Hra {
             konec = true;
             return;
         }
+        boolean nalezeno = false;
         for (Prikaz p : seznamPrikazu) {
             if (p.getNazev().equals(nazev)) {
-                p.proved(slova);
-                return;
+                String vysledek = p.proved(slova);
+                System.out.println(vysledek);
+                nalezeno = true;
+                break;
             }
         }
-        System.out.println("Neznámý příkaz.");
+        if (!nalezeno) {
+            System.out.println("Neznámý příkaz.");
+        }
     }
 }

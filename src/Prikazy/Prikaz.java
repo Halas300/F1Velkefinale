@@ -2,7 +2,7 @@ package Prikazy;
 
 public interface Prikaz {
 
-    void proved(String[] parametry);
+    public String proved(String[] parametry);
 
     String getNazev();
 }
