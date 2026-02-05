@@ -9,33 +9,35 @@ public class PrikazProzkoumej implements Prikaz {
         return "prozkoumej";
     }
     @Override
-    public void proved(String[] parametry) {
-        System.out.println("Místnost: " + Hra.aktualniLokace.getNazev());
-        System.out.println("Popis:    " + Hra.aktualniLokace.getPopis());
+    public String proved(String[] parametry) {
+        String vystup = "";
+        vystup += "Místnost: " + Hra.aktualniLokace.getNazev() + "\n";
+        vystup += "Popis:    " + Hra.aktualniLokace.getPopis() + "\n";
 
         if (Hra.aktualniLokace.veciVMistnosti.isEmpty()) {
-            System.out.println("Předměty: Nejsou tady");
+            vystup += "Předměty: Nejsou tady";
         } else {
-            System.out.print("Předměty: ");
+            vystup += "Předměty: ";
             for (String idVeci : Hra.aktualniLokace.veciVMistnosti) {
                 Veci v = Hra.data.NajdiVec(idVeci);
                 if (v != null) {
-                    System.out.print(v.getNazev());
+                    vystup += v.getNazev();
                 }
-                System.out.println();
+                vystup += "\n";
             }
         }
 
-        System.out.print("Postavy:  ");
+        vystup += "Postavy:  ";
         boolean nekdoTuJe = false;
         for (NPC postava : Hra.data.NPC) {
             if (postava.getDomovskaLokace().equals(Hra.aktualniLokace.getId())) {
-                System.out.print(postava.getJmeno() + " (" + postava.getRole() + "), ");
+                vystup += postava.getJmeno() + " (" + postava.getRole() + "), ";
                 nekdoTuJe = true;
             }
         }
         if (!nekdoTuJe) {
-            System.out.print("Nikdo tu není.");
+            vystup += "Nikdo tu není.";
         }
+        return vystup;
     }
 }
