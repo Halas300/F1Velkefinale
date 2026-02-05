@@ -11,26 +11,20 @@ public class PrikazJdi implements Prikaz {
     }
 
     @Override
-    public void proved(String[] parametry) {
+    public String proved(String[] parametry) {
         if (parametry.length < 2) {
-            System.out.println("Musíš napsat, kam chceš jít (např. jdi garaz)");
-            return;
+            return "Musíš napsat, kam chceš jít (např. jdi garaz)";
         }
 
         String cil = parametry[1];
-        boolean naselJsem = false;
         for (String idSouseda : Hra.aktualniLokace.soused) {
             Mistnosti sousedLokace = Hra.data.najdiMistnost(idSouseda);
             if (sousedLokace.getNazev().toLowerCase().contains(cil.toLowerCase())) {
                 Hra.aktualniLokace = sousedLokace;
-                System.out.println("Přešel jsi do: " + sousedLokace.getNazev());
-                System.out.println(sousedLokace.getPopis());
-                naselJsem = true;
-                break;
+                return "Přešel jsi do: " + sousedLokace.getNazev() + "\n" +
+                        sousedLokace.getPopis();
             }
         }
-        if (!naselJsem) {
-            System.out.println("Někde nastala chyba, bud si napsal špatně příkaz nebo odtud nevede cesta");
+        return "Tam odsud cesta nevede.";
         }
     }
-}
