@@ -11,16 +11,16 @@ public class PrikazBatoh implements Prikaz {
     }
 
     @Override
-    public void proved(String[] parametry) {
+    public String proved(String[] parametry) {
         if (StavHrace.batoh.isEmpty()) {
-            System.out.println("Batoh je prázdný.");
-            return;
+            return "Batoh je prázdný.";
         }
+
+        String vystup = "OBSAH BATOHU\n";
 
         for (Veci v : StavHrace.batoh) {
-            System.out.println(v.getNazev() + " (" + v.getPopis() + ")");
+            vystup += "Místo: " + StavHrace.batoh.size() + "/" + StavHrace.KapacitaBatohu;
         }
-
-        System.out.println("Místo: " + StavHrace.batoh.size() + "/" + StavHrace.KapacitaBatohu);
+        return vystup;
     }
 }
