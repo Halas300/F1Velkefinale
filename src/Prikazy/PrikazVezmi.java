@@ -12,16 +12,14 @@ public class PrikazVezmi implements Prikaz {
     }
 
     @Override
-    public void proved(String[] parametry) {
+    public String proved(String[] parametry) {
         if (parametry.length < 2) {
-            System.out.println("Co chceš vzít? (např. vezmi helma)");
-            return;
+            return "Co chceš vzít? (např. vezmi helma)";
         }
 
         String nazevVeci = parametry[1];
         if (StavHrace.batoh.size() >= StavHrace.KapacitaBatohu) {
-            System.out.println("Batoh je plný, Něco musíš použít");
-            return;
+            return "Batoh je plný, Něco musíš použít";
         }
 
         boolean nalezeno = false;
@@ -42,9 +40,9 @@ public class PrikazVezmi implements Prikaz {
         if (nalezeno) {
             StavHrace.batoh.add(predmetKteryChciPridat);
             Hra.aktualniLokace.veciVMistnosti.remove(idKtereChciSmazat);
-            System.out.println("Sebral jsi: " + predmetKteryChciPridat.getNazev());
+            return "Sebral jsi: " + predmetKteryChciPridat.getNazev();
         } else {
-            System.out.println("Takový předmět tu není");
+            return "Takový předmět tu není";
         }
     }
 }
