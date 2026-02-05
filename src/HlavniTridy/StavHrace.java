@@ -10,4 +10,5 @@ public class StavHrace {
     public static boolean autoOpraveno = false;
     public static boolean dataStazena = false;
     public static boolean nastavenoKridlo = false;
+    public static boolean nastavenyPneu = false;
 }

@@ -18,7 +18,7 @@ public class PrikazNapoveda implements Prikaz {
         System.out.println("- mluv [jméno]");
         System.out.println("- pouzij [věc]");
         System.out.println("- nastav [kridlo/pneu] [hodnota]");
-        System.out.println("- konec");
-        System.out.println("Při příkazu jdi stačí napsat první 3/4 písmena místnosti, kam chceš jít");
+        System.out.println("- mapa (zobrazí mapu)");
+        System.out.println("- prozkoumej (k prozkoumání místnosti)");
     }
 }
