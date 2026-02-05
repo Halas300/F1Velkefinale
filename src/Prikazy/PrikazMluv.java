@@ -10,10 +10,9 @@ public class PrikazMluv implements Prikaz {
     }
 
     @Override
-    public void proved(String[] parametry) {
+    public String proved(String[] parametry) {
         if (parametry.length < 2) {
-            System.out.println("S kým chceš mluvit?");
-            return;
+            return "S kým chceš mluvit?";
         }
 
         String jmeno = parametry[1].toLowerCase();
@@ -28,9 +27,9 @@ public class PrikazMluv implements Prikaz {
         }
 
         if (nalezenaPostava != null) {
-            System.out.println(nalezenaPostava.getJmeno() + ": " + nalezenaPostava.getPoznamky());
+            return nalezenaPostava.getJmeno() + ": " + nalezenaPostava.getPoznamky();
         } else {
-            System.out.println("Taková postava tu není.");
+            return "Taková postava tu není.";
         }
     }
 }
