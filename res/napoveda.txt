@@ -1,0 +1,40 @@
+Cíl hry:
+  Tvým úkolem je připravit formuli na Velkou cenu
+  a porazit Maxe Verstappena. Musíš opravit auto,
+  získat data o nastavení a zvolit správnou strategii.
+
+Dostupné příkazy:
+  > jdi [místnost]
+    - Přesune tě do jiné místnosti.
+    - Příklad: "jdi garaz" nebo "jdi paddock"
+
+  > prozkoumej
+    - Prouzkoumáš místnost.
+    - Příklad: "prozkoumej"
+
+  > vezmi [věc]
+    - Sebereš předmět do batohu.
+    - Příklad: "vezmi helma"
+
+  > batoh
+    - Ukáže obsah tvého inventáře.
+    - Příklad: "batoh"
+
+  > mluv [jméno]
+    - Promluvíš s postavou v místnosti.
+    - Příklad: "mluv james"
+
+  > pouzij [věc]
+    - Použiješ předmět z batohu (např. nářadí).
+    - Příklad: "pouzij naradi"
+
+  > nastav [kridlo] [hodnota]
+    - Nastavíš aerodynamiku auta (číslo 1-10).
+    - Příklad: "nastav kridlo 6"
+
+  > mapa
+    - Zobrazí mapu okruhu.
+    - Příklad: "mapa"
+
+  > konec
+    - Ukončí hru.
