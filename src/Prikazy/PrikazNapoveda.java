@@ -1,4 +1,5 @@
 package Prikazy;
+import HlavniTridy.TextoveData;
 
 public class PrikazNapoveda implements Prikaz {
 
@@ -8,17 +9,7 @@ public class PrikazNapoveda implements Prikaz {
     }
 
     @Override
-    public void proved(String[] parametry) {
-        System.out.println("--- NÁPOVĚDA ---");
-        System.out.println("Tvým úkolem je připravit auto a porazit Maxe.");
-        System.out.println("Příkazy, které můžeš použít:");
-        System.out.println("- jdi [místnost]");
-        System.out.println("- vezmi [věc]");
-        System.out.println("- batoh (ukáže inventář)");
-        System.out.println("- mluv [jméno]");
-        System.out.println("- pouzij [věc]");
-        System.out.println("- nastav [kridlo/pneu] [hodnota]");
-        System.out.println("- mapa (zobrazí mapu)");
-        System.out.println("- prozkoumej (k prozkoumání místnosti)");
+    public String proved(String[] parametry) {
+        return TextoveData.nactiText("/napoveda.txt");
     }
 }
