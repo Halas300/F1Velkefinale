@@ -8,10 +8,9 @@ public class PrikazNastav implements Prikaz {
     }
 
     @Override
-    public void proved(String[] parametry) {
+    public String proved(String[] parametry) {
         if (parametry.length < 3) {
-            System.out.println("Použití: nastav [kridlo/pneu] [hodnota]");
-            return;
+            return "Použití: nastav [kridlo/pneu] [hodnota]";
         }
 
         String co = parametry[1];

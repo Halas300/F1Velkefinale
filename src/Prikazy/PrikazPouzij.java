@@ -11,10 +11,9 @@ public class PrikazPouzij implements Prikaz {
     }
 
     @Override
-    public void proved(String[] parametry) {
+    public String proved(String[] parametry) {
         if (parametry.length < 2) {
-            System.out.println("Co chceš použít?");
-            return;
+            return "Co chceš použít?";
         }
 
         String nazev = parametry[1].toLowerCase();
@@ -27,8 +26,7 @@ public class PrikazPouzij implements Prikaz {
         }
 
         if (vecKPouziti == null) {
-            System.out.println("Tuhle věc nemáš v batohu");
-            return;
+            return "Tuhle věc nemáš v batohu";
         }
 
         String idVeci = vecKPouziti.getId();
@@ -36,32 +34,28 @@ public class PrikazPouzij implements Prikaz {
 
         if (idVeci.equals("item_naradi") && idMistnost.equals("loc_garaz")) {
             if (!StavHrace.autoOpraveno) {
-                System.out.println("Použil jsi nářadí k opravě auta.");
-                System.out.println("Auto se opravuje...");
-                System.out.println("Auto bylo úspěšně opraveno");
                 StavHrace.autoOpraveno = true;
+                return "Použil jsi nářadí k opravě auta.\nAuto se opravuje...\nAuto bylo úspěšně opraveno";
             } else {
-                System.out.println("Auto už je opravené.");
+                return "Auto už je opravené.";
             }
         }
 
         else if (idVeci.equals("item_disk") && idMistnost.equals("loc_tech")) {
             if (!StavHrace.dataStazena) {
-                System.out.println("Použil jsi disk na získání dat");
-                System.out.println("Data se stahují...");
-                System.out.println("Dle dat z treninku je doporučené nastavit křídla na 7 stupen");
                 StavHrace.dataStazena = true;
+                return "Použil jsi disk na získání dat\nData se stahují...\nDle dat z treninku je doporučené nastavit křídla na 7 stupen";
             } else {
-                System.out.println("Data už máš stažená");
+                return "Data už máš stažená";
             }
         }
 
         else if (idVeci.equals("item_tablet")) {
-            System.out.println("Koukáš na tablet. Předpověď počasí je slunečnno. Teplota bude cca 30 a šance na déšt je malá");
-            System.out.println("Doporučujeme nejdříve stáhnout data z disku pro zjištění nejlepší strategie");
+            String zprava = "Koukáš na tablet. Předpověď počasí je slunečnno. Teplota bude cca 30 a šance na déšt je malá\nDoporučujeme nejdříve stáhnout data z disku pro zjištění nejlepší strategie";
             if (StavHrace.dataStazena) {
-                System.out.println("Doporučená strategie je startovat na soft a poté přezout na medium");
+                return "Doporučená strategie je startovat na soft a poté přezout na medium";
             }
         }
+        return "Tady to použít nejde.";
     }
 }
