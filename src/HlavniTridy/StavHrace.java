@@ -9,6 +9,6 @@ public class StavHrace {
 
     public static boolean autoOpraveno = false;
     public static boolean dataStazena = false;
-    public static boolean nastavenoKridlo = false;
+    public static int nastavenoKridlo = 0;
     public static boolean nastavenyPneu = false;
 }

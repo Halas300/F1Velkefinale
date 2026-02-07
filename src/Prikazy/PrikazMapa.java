@@ -10,7 +10,7 @@ public class PrikazMapa implements Prikaz {
 
     @Override
     public String proved(String[] parametry) {
-        return TextoveData.nactiText("/napoveda.txt");
+        return TextoveData.nactiText("/mapa.txt");
     }
 }
 
