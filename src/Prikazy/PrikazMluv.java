@@ -52,6 +52,16 @@ public class PrikazMluv implements Prikaz {
                     "C) Děláme, co můžeme. Je to pod tlakem pro všechny stejné, ne?\n" +
                     "(Napiš A, B nebo C)";
         }
+        if (nalezenaPostava.getJmeno().equalsIgnoreCase("Christian")) {
+            StavHrace.probihaRozhovor = true;
+            StavHrace.sKymMluvim = "Christian";
+            StavHrace.cisloOtazky = 0;
+
+            return "Christian: Tak je to tady. Poslední závod, stejné body. Cítíš se na to, nebo ti mám nechat přinést vodu?\n\n" +
+                    "A) Jsem připravený víc než kdy jindy. Jdeme na to.\n" +
+                    "B) Potřebuju minutu klidu. Jen já a auto.\n" +
+                    "C) Hlavně mi dejte auto, co to vyhraje.";
+        }
         if (nalezenaPostava.getJmeno().equalsIgnoreCase("James")) {
             return DialogJames();
         }

@@ -14,4 +14,5 @@ public class StavHrace {
     public static int cisloOtazky = 0;
     public static boolean rozhovorDokoncen = false;
     public static String sKymMluvim = "";
+    public static boolean radaOdChristiana = false;
 }
