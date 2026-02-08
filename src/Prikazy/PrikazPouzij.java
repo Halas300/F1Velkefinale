@@ -51,10 +51,12 @@ public class PrikazPouzij implements Prikaz {
         }
 
         else if (idVeci.equals("item_tablet")) {
-            String zprava = "Koukáš na tablet. Předpověď počasí je slunečnno. Teplota bude cca 30 a šance na déšt je malá\nDoporučujeme nejdříve stáhnout data z disku pro zjištění nejlepší strategie";
+            String zprava = "Koukáš na tablet. Předpověď počasí je slunečnno. Teplota bude cca 30 a šance na déšt je malá";
+            zprava += "\nDoporučujeme nejdříve stáhnout data z disku pro zjištění nejlepší strategie.";
             if (StavHrace.dataStazena) {
-                return "Doporučená strategie je startovat na soft a poté přezout na medium";
+                return "Koukáš na tablet. Předpověď počasí je slunečnno. Teplota bude cca 30 a šance na déšt je malá\nDoporučená strategie je startovat na soft a poté přezout na medium";
             }
+            return zprava;
         }
         return "Tady to použít nejde.";
     }
