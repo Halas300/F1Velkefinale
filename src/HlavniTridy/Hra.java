@@ -25,8 +25,9 @@ public class Hra {
         }
         zacniPrikazy();
         Scanner sc = new Scanner(System.in);
-        System.out.println(" F1 - Velké Finále ");
-        System.out.println("Jsi v: " + aktualniLokace.getNazev());
+        String uvodniText = TextoveData.nactiText("/uvod.txt");
+        System.out.println(uvodniText);
+        System.out.println("\nJsi v: " + aktualniLokace.getNazev());
         while (!konec) {
             String vstup = sc.nextLine();
             zpracujPrikaz(vstup);
