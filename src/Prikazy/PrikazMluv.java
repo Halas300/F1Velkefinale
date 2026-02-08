@@ -36,8 +36,21 @@ public class PrikazMluv implements Prikaz {
                 return "Sarah: Už jsme spolu mluvili";
             }
             StavHrace.probihaRozhovor = true;
+            StavHrace.sKymMluvim = "Sarah";
             StavHrace.cisloOtazky = 0;
             return "Sarah: Ahoj, jsem tvoje PR manažerka. Můžu s tebou udělat rozhovor? (Odpověz 'ano' nebo 'ne')";
+        }
+        if (nalezenaPostava.getJmeno().equalsIgnoreCase("Max")) {
+            StavHrace.probihaRozhovor = true;
+            StavHrace.sKymMluvim = "Max";
+            StavHrace.cisloOtazky = 0;
+
+            return "Max: Slyšel jsem, že máte technické problémy. Doufám, že ti to auto v první zatáčce neustřelí.\n" +
+                    "Byla by škoda rozhodnout titul takhle lacino.\n\n" +
+                    "A) Soustřeď se na své auto. Moje je v nejlepším stavu za celou sezónu.\n" +
+                    "B) I s těma problémama bych ti ujel o půl vteřiny. Radši si zkontroluj zpětná zrcátka.\n" +
+                    "C) Děláme, co můžeme. Je to pod tlakem pro všechny stejné, ne?\n" +
+                    "(Napiš A, B nebo C)";
         }
         if (nalezenaPostava.getJmeno().equalsIgnoreCase("James")) {
             return DialogJames();
