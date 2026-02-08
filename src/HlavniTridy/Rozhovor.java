@@ -3,7 +3,17 @@ package HlavniTridy;
 public class Rozhovor {
 
     public static String zpracujOdpoved(String odpovedHrace) {
+        if (StavHrace.sKymMluvim.equals("Sarah")) {
+            return zpracujSarah(odpovedHrace);
+        }
+        else if (StavHrace.sKymMluvim.equals("Max")) {
+            return zpracujMaxe(odpovedHrace);
+        }
 
+        return "Chyba: Nevím s kým mluvíš.";
+    }
+
+        private static String zpracujSarah(String odpovedHrace) {
         if (StavHrace.cisloOtazky == 0) {
             if (odpovedHrace.toLowerCase().equals("ano")) {
                 StavHrace.cisloOtazky++;
@@ -43,5 +53,38 @@ public class Rozhovor {
         }
 
         return "Chyba v rozhovoru.";
+    }
+
+    private static String zpracujMaxe(String odpovedHrace) {
+        String volba = odpovedHrace.toUpperCase();
+
+        if (!volba.equals("A") && !volba.equals("B") && !volba.equals("C")) {
+            return "Napiš A nebo B nebo C";
+        }
+
+        if (StavHrace.cisloOtazky == 0) {
+            StavHrace.cisloOtazky ++;
+            return "Max: Všichni mluví o tom, jaký jsi talent. Ale víš, jak to chodí – historie si pamatuje jen vítěze.\n" +
+                    "Jsi připravený na to, že zítra budeš pro všechny jen ten, co skončil druhý?\n\n" +
+                    "A) Tlak mě nezajímá. Jediné, co cítím, je motor za mými zády.\n" +
+                    "B) To zní, jako bys už teď mluvil o sobě. Už máš nacvičený proslov pro poražené?\n" +
+                    "C) Dneska vyhraje ten, kdo udělá o jednu chybu míň.";
+        }
+
+        if (StavHrace.cisloOtazky == 1) {
+            StavHrace.cisloOtazky ++;
+            return "Max: Jen si ujasněme jednu věc. Dneska ti nenechám ani milimetr místa.\n" +
+                    "Jestli tam tu ruku strčíš, tak počítej s tím, že ani jeden nedojedeme.\n\n" +
+                    "A) Chci vyhrát čistě. Ale jestli mě vytlačíš, nenechám to jen tak.\n" +
+                    "B) Takhle snadno mě nezastrašíš. Jestli do mě narazíš, vezmeš ten titul s sebou do bariéry.\n" +
+                    "C) Míň mluv, víc jezdi. Uvidíme se na trati.";
+        }
+
+        if (StavHrace.cisloOtazky == 2) {
+            StavHrace.probihaRozhovor = false;
+            return "Max: Fajn. Užij si ten pohled na moje zadní křídlo.\n(Max si nasadil sluchátka a odešel.)";
+        }
+
+        return "Chyba u Maxe.";
     }
 }
