@@ -9,6 +9,9 @@ public class Rozhovor {
         else if (StavHrace.sKymMluvim.equals("Max")) {
             return zpracujMaxe(odpovedHrace);
         }
+        else if (StavHrace.sKymMluvim.equals("Christian")) {
+            return zpracujChristiana(odpovedHrace);
+        }
 
         return "Chyba: Nevím s kým mluvíš.";
     }
@@ -86,5 +89,49 @@ public class Rozhovor {
         }
 
         return "Chyba u Maxe.";
+    }
+
+    private static String zpracujChristiana(String odpovedHrace) {
+        String volba = odpovedHrace.toUpperCase();
+
+        if (!volba.equals("A") && !volba.equals("B") && !volba.equals("C")) {
+            return "Napiš A nebo B nebo C";
+        }
+
+        if (StavHrace.cisloOtazky == 0) {
+            StavHrace.cisloOtazky ++;
+            return "Christian: Dobře.\n" +
+                    "Jde o všechno. Půjdeš do totálního rizika, nebo pojedeš na jistotu?\n\n" +
+                    "A) Beru jen zlato. Riziko k tomu patří.\n" +
+                    "B) Pojedu hlavou. Hlavně to dojet.\n" +
+                    "C) Uvidím podle situace. Věřte mi.";
+        }
+
+        if (StavHrace.cisloOtazky == 1) {
+            StavHrace.cisloOtazky ++;
+            return "Christian: Rozumím.\n" +
+                    "Podívej se na ty lidi v garáži. Všichni tu dneska věří jen v tebe. Cítíš tu energii?\n\n" +
+                    "A) Je to motor, co mě žene vpřed. Nezklameme je.\n" +
+                    "B) Snažím se to nevnímat. Musím se soustředit na jízdu.\n" +
+                    "C) Hlavně doufám, že neudělají chybu při zastávce.";
+        }
+
+        if (StavHrace.cisloOtazky == 2) {
+            StavHrace.cisloOtazky ++;
+            return "Christian: Jasně.\n" +
+                    "Kdyby začalo pršet, budeme muset improvizovat. Věříš mému úsudku od zdi, nebo si to na trati rozhodneš sám?\n\n" +
+                    "A) Věřím vám. Máte víc dat než já v kokpitu.\n" +
+                    "B) Já jsem v tom autě. Konečné slovo mám já.\n" +
+                    "C) Budeme mluvit do vysílačky. Společně to trefíme.";
+        }
+
+        if (StavHrace.cisloOtazky == 3) {
+            StavHrace.probihaRozhovor = false;
+            StavHrace.radaOdChristiana = true;
+            // ještě bude dopsáno
+            return "Christian: Nějaká Rada";
+        }
+
+        return "Chyba u Christiana.";
     }
 }
