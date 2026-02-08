@@ -1,0 +1,33 @@
+                F1 2026: THE FINAL LAP
+
+Vítej v Abú Dhabí. Je neděle ráno, den posledního závodu.
+
+Situace je kritická:
+Ty a Max Verstappen máte v šampionátu shodný počet bodů.
+Kdo dnes dojede lépe, stane se mistrem světa. Kdo prohraje,
+nezíská nic.
+
+Tvůj tým ale hlásí problémy. Auto není stoprocentně připravené
+a v garáži panuje nervozita.
+
+   RYCHLÝ TUTORIÁL
+Hru ovládáš psaním příkazů. Zde jsou ty nejdůležitější:
+ > jdi [místnost]   -> Přesune tě jinam (např. 'jdi garaz')
+ > prozkoumej       -> Podíváš se, co a kdo je kolem tebe
+ > mluv [jméno]     -> Promluvíš si s postavou
+ > vezmi [věc]      -> Sebereš předmět
+ > batoh            -> Ukáže tvůj inventář
+ > napoveda         -> Zobrazí seznam všech příkazů
+ > mapa             -> Zobrazí mapu
+ > nastav           -> nastavuje křídlo
+ > pouzij [věc]     -> Použije dannou věc
+ > Zahod [věc]      -> Zahodí vec z batohu
+
+   TVŮJ PRVNÍ ÚKOL
+Právě se nacházíš ve svém Motorhome (soukromý pokoj).
+Musíš okamžitě zjistit, co se děje s autem.
+
+Jdi do GARÁŽE a promluv si s inženýrem JAMESEM.
+(Napiš: "jdi garaz" a poté "mluv james")
+
+Hodně štěstí, šampione.
