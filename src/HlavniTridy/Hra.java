@@ -47,6 +47,11 @@ public class Hra {
     }
 
     private void zpracujPrikaz(String radek) {
+        if (StavHrace.probihaRozhovor) {
+            String odpovedSarah = Rozhovor.zpracujOdpoved(radek.trim());
+            System.out.println(odpovedSarah);
+            return;
+        }
         String[] slova = radek.trim().split(" ");
         String nazev = slova[0].toLowerCase();
         if (nazev.equals("konec")) {
