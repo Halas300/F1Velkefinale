@@ -30,6 +30,15 @@ public class PrikazMluv implements Prikaz {
         if (nalezenaPostava == null) {
             return "Taková postava tu není.";
         }
+
+        if (nalezenaPostava.getJmeno().equalsIgnoreCase("Sarah")) {
+            if (StavHrace.rozhovorDokoncen) {
+                return "Sarah: Už jsme spolu mluvili";
+            }
+            StavHrace.probihaRozhovor = true;
+            StavHrace.cisloOtazky = 0;
+            return "Sarah: Ahoj, jsem tvoje PR manažerka. Můžu s tebou udělat rozhovor? (Odpověz 'ano' nebo 'ne')";
+        }
         if (nalezenaPostava.getJmeno().equalsIgnoreCase("James")) {
             return DialogJames();
         }
