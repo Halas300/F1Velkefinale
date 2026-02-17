@@ -83,4 +83,12 @@ public class Kvalifikace {
                         return uvod;
                 }
         }
+
+        private static String vypisOtazky(int index) {
+                String text = " Otázka " + (index + 1) + ": " + otazky[index][0] + "\n";
+                text = text + "A) " + otazky[index][1] + "\n";
+                text = text + "B) " + otazky[index][2] + "\n";
+                text = text + "C) " + otazky[index][3] + "\n";
+                return text;
+        }
 }
