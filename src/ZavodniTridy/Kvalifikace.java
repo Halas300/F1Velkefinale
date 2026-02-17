@@ -1,4 +1,5 @@
 package ZavodniTridy;
+import HlavniTridy.StavHrace;
 
 public class Kvalifikace {
     private static String[][] otazky = {
@@ -73,4 +74,13 @@ public class Kvalifikace {
                     "1"
             }
     };
+        public static String kvalda(String vstup) {
+                if (StavHrace.aktualniKoloOtazka == -1) {
+                        StavHrace.aktualniKoloOtazka = 0;
+                        String uvod = "Vítej v kvalifikaci\n";
+                        uvod = uvod + "Zkus odpovědět správně na otázky a získej dobrou sartovací pozici\n";
+                        uvod = uvod + vypisOtazky(0);
+                        return uvod;
+                }
+        }
 }

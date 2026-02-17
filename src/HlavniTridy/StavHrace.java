@@ -18,5 +18,6 @@ public class StavHrace {
     public static int fazeHry = 0;
     public static int startovniPozice = 20;
     public static int aktualniPozice = 20;
+    public static int aktualniKoloOtazka = 0;
 
 }
