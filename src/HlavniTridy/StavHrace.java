@@ -15,4 +15,8 @@ public class StavHrace {
     public static boolean rozhovorDokoncen = false;
     public static String sKymMluvim = "";
     public static boolean radaOdChristiana = false;
+    public static int fazeHry = 0;
+    public static int startovniPozice = 20;
+    public static int aktualniPozice = 20;
+
 }
