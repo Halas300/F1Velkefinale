@@ -1,4 +1,76 @@
 package ZavodniTridy;
 
 public class Kvalifikace {
+    private static String[][] otazky = {
+            {
+                    "Proč je důležité správně načasovat brzdění do nájezdu na nejdelší rovinku?",
+                    "Aby jezdec získal co nejlepší trakci na výjezdu a maximalizoval účinek DRS.",
+                    "Aby se zabránilo přehřátí předních pneumatik.",
+                    "Kvůli úspoře paliva.",
+                    "0"
+            },
+            {
+                    "Jakou taktiku používají jezdci v sektoru 3 ohledně pneumatik?",
+                    "Agresivní jízda přes obrubníky.",
+                    "Precizní stopa a šetření zadních pneumatik.",
+                    "Maximalizace rychlosti v nájezdu.",
+                    "1"
+            },
+            {
+                    "Jaký strategický význam má v Abu Dhabi undercut?",
+                    "Malý, výjezd je pomalý.",
+                    "Zanedbatelný.",
+                    "Vysoký, čerstvé pneu umožní získat náskok.",
+                    "2"
+            },
+            {
+                    "Jaký dopad měla úprava tratě v roce 2021?",
+                    "Zvýšila se rychlost a šance na předjíždění.",
+                    "Trať se stala pomalejší.",
+                    "Změny neměly vliv.",
+                    "0"
+            },
+            {
+                    "Který jezdec drží rekord v počtu titulů (s Schumacherem)?",
+                    "Max Verstappen",
+                    "Lewis Hamilton",
+                    "Sebastian Vettel",
+                    "1"
+            },
+            {
+                    "Co znamená vyvěšení modré vlajky?",
+                    "Nebezpečí na trati.",
+                    "Pomalejší jezdec musí pustit rychlejšího.",
+                    "Konec tréninku.",
+                    "1"
+            },
+            {
+                    "Na kterém okruhu se jede VC Itálie (Chrám rychlosti)?",
+                    "Imola",
+                    "Monza",
+                    "Mugello",
+                    "1"
+            },
+            {
+                    "Co je to systém DRS?",
+                    "Pohyblivé zadní křídlo pro snazší předjíždění.",
+                    "Rekuperace energie.",
+                    "Režim motoru.",
+                    "0"
+            },
+            {
+                    "Co je to přísavný efekt (Ground Effect)?",
+                    "Ventilátory vysávají vzduch.",
+                    "Tvarovaná podlaha vytváří podtlak.",
+                    "Magnetické pole v asfaltu.",
+                    "1"
+            },
+            {
+                    "K čemu slouží prvek zvaný „Halo“?",
+                    "Zlepšení sání motoru.",
+                    "Ochrana hlavy jezdce.",
+                    "Upevnění kamer.",
+                    "1"
+            }
+    };
 }
