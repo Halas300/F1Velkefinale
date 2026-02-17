@@ -82,6 +82,28 @@ public class Kvalifikace {
                         uvod = uvod + vypisOtazky(0);
                         return uvod;
                 }
+
+                String odpoved = vstup.toUpperCase();
+                int indexVolby;
+                switch (odpoved) {
+                        case "A":
+                                indexVolby = 0;
+                                break;
+                        case "B":
+                                indexVolby = 1;
+                                break;
+                        case "C":
+                                indexVolby = 2;
+                                break;
+                        default:
+                                return "Odpověz prosím A, B nebo C.";
+                }
+
+                int spravne = Integer.parseInt(otazky[StavHrace.aktualniKoloOtazka][4]);
+                if (indexVolby != spravne) {
+                        StavHrace.startovniPozice = StavHrace.startovniPozice + 1;
+                }
+                StavHrace.aktualniKoloOtazka = StavHrace.aktualniKoloOtazka + 1;
         }
 
         private static String vypisOtazky(int index) {
