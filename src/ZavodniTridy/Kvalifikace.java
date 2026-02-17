@@ -104,6 +104,18 @@ public class Kvalifikace {
                         StavHrace.startovniPozice = StavHrace.startovniPozice + 1;
                 }
                 StavHrace.aktualniKoloOtazka = StavHrace.aktualniKoloOtazka + 1;
+                if (StavHrace.aktualniKoloOtazka >= 10) {
+                        StavHrace.fazeHry = 2;
+                        StavHrace.aktualniKoloOtazka = 0;
+                        StavHrace.aktualniPozice = StavHrace.startovniPozice;
+                        String konec = "Kvalifikace dokončena\n";
+                        konec = konec + "Startuješ z " + StavHrace.startovniPozice + " místa.\n";
+                        konec = konec + "Rovnou si připrav startovací pneumatiky na závod\n";
+                        konec = konec + "Napiš na čem chceš startovat: SOFT, MEDIUM nebo HARD";
+                        return konec;
+                }
+
+                return vypisOtazky(StavHrace.aktualniKoloOtazka);
         }
 
         private static String vypisOtazky(int index) {
