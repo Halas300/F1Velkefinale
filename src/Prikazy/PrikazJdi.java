@@ -64,6 +64,9 @@ public class PrikazJdi implements Prikaz {
                     if (vseSplneno == false) {
                         return "Ještě nemůžeš vstoupit do kvalifikace. Ještě ti chybí:\n" + chybi;
                     }
+                    if (StavHrace.nastavenoKridlo != 7) {
+                        StavHrace.startovniPozice = StavHrace.startovniPozice + 1;
+                    }
                     StavHrace.fazeHry = 1;
                     StavHrace.aktualniKoloOtazka = -1;
                     return "Vše máš splněno, takže můžeš nastoupit do kvalifikace.\n" +
