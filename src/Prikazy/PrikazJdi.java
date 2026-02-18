@@ -41,6 +41,12 @@ public class PrikazJdi implements Prikaz {
                         vseSplneno = false;
                         chybi = chybi + "Udělat rozhovor se Sarah\n";
                     }
+                    StavHrace.fazeHry = 1;
+                    StavHrace.aktualniKoloOtazka = -1;
+                    return "Vše máš splněno, takže můžeš nastoupit do kvalifikace.\n" +
+                            "Stiskni Enter pro start";
+                }
+
                 Hra.aktualniLokace = sousedLokace;
                 return "Přešel jsi do: " + sousedLokace.getNazev() + "\n" +
                         sousedLokace.getPopis();
