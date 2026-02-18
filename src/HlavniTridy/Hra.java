@@ -2,6 +2,8 @@ package HlavniTridy;
 
 import PridaneVeci.Mistnosti;
 import Prikazy.*;
+import ZavodniTridy.Kvalifikace;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,7 +32,13 @@ public class Hra {
         System.out.println("\nJsi v: " + aktualniLokace.getNazev());
         while (!konec) {
             String vstup = sc.nextLine();
+            if (StavHrace.fazeHry == 0) {
             zpracujPrikaz(vstup);
+            }
+            else if (StavHrace.fazeHry == 1) {
+                String vysledekKvalifikace = Kvalifikace.kvalda(vstup);
+                System.out.println(vysledekKvalifikace);
+            }
         }
     }
 
