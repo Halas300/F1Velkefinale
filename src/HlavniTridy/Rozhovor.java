@@ -128,8 +128,8 @@ public class Rozhovor {
         if (StavHrace.cisloOtazky == 3) {
             StavHrace.probihaRozhovor = false;
             StavHrace.radaOdChristiana = true;
-            // ještě bude dopsáno
-            return "Christian: Nějaká Rada";
+            return "Christian: Nezapomen, že kvůli předchozím změnám je trat rychlejší a lépe se tu předjíždí.\n" +
+                    "Undercut je tady taky velmi silný, ale ted už běž at máš dost času se soustředit";
         }
 
         return "Chyba u Christiana.";
