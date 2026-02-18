@@ -3,6 +3,7 @@ package Prikazy;
 import HlavniTridy.Hra;
 import HlavniTridy.StavHrace;
 import PridaneVeci.Mistnosti;
+import PridaneVeci.Veci;
 
 public class PrikazJdi implements Prikaz {
 
@@ -40,6 +41,25 @@ public class PrikazJdi implements Prikaz {
                     if (!StavHrace.rozhovorDokoncen) {
                         vseSplneno = false;
                         chybi = chybi + "Udělat rozhovor se Sarah\n";
+                    }
+                    boolean mamHelmu = false;
+                    boolean mamrukavice = false;
+
+                    for (Veci v : StavHrace.batoh) {
+                        if (v.getId().equals("item_helma")) {
+                            mamHelmu = true;
+                        }
+                        if (v.getId().equals("item_rukavice")) {
+                            mamrukavice = true;
+                        }
+                    }
+                    if (mamHelmu == false) {
+                        vseSplneno = false;
+                        chybi = chybi + "Vzít si Helmu \n";
+                    }
+                    if (mamrukavice == false) {
+                        vseSplneno = false;
+                        chybi = chybi + "Vzít si Rukavice \n";
                     }
                     if (vseSplneno == false) {
                         return "Ještě nemůžeš vstoupit do kvalifikace. Ještě ti chybí:\n" + chybi;
