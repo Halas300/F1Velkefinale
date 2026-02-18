@@ -41,6 +41,9 @@ public class PrikazJdi implements Prikaz {
                         vseSplneno = false;
                         chybi = chybi + "Udělat rozhovor se Sarah\n";
                     }
+                    if (vseSplneno == false) {
+                        return "Ještě nemůžeš vstoupit do kvalifikace. Ještě ti chybí:\n" + chybi;
+                    }
                     StavHrace.fazeHry = 1;
                     StavHrace.aktualniKoloOtazka = -1;
                     return "Vše máš splněno, takže můžeš nastoupit do kvalifikace.\n" +
