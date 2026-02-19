@@ -49,7 +49,6 @@ public class Zavod {
         }
         if (StavHrace.zivotnostPneu <= 0) {
             return vystup + "Guma explodovala kvůli opotřebovanosti. Nedojel jsi a prohrál si souboj o titul";
-            System.exit(0);
         }
 
         if (StavHrace.aktualniKolo == 20) {
@@ -59,6 +58,12 @@ public class Zavod {
                 return vystup + "\n Jsi v cíli, dojel jsi na " + StavHrace.aktualniPozice + ". místě.\nMax vyhrál titul. Prohrál jsi souboj o titul.";
             }
         }
+
+        StavHrace.aktualniKolo = StavHrace.aktualniKolo + 1;
+        vystup = vystup + "\nPozice: " + StavHrace.aktualniPozice + " | Pneu: " + StavHrace.zivotnostPneu + "%\n";
+        vystup = vystup + "Další příkaz: zrychli, neutral, setri, box";
+
+        return vystup;
 
         }
     }
