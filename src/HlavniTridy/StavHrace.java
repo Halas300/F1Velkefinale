@@ -19,5 +19,8 @@ public class StavHrace {
     public static int startovniPozice = 2;
     public static int aktualniPozice = 2;
     public static int aktualniKoloOtazka = 0;
+    public static String aktualniPneu = "";
+    public static int zivotnostPneu = 100;
+    public static int aktualniKolo = 0;
 
 }
