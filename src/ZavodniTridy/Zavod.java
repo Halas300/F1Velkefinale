@@ -52,6 +52,15 @@ public class Zavod {
                 default:
                     return "Napiš prosím SOFT, MEDIUM, HARD nebo WET";
             }
+            StavHrace.zivotnostPneu = 100;
+            StavHrace.vBoxech = false;
+            int ztrataPozic = 4;
+            StavHrace.aktualniPozice = StavHrace.aktualniPozice + ztrataPozic;
+            String zpravaZBoxu = "Mechanici přezuli na " + StavHrace.aktualniPneu + "\n";
+            zpravaZBoxu = zpravaZBoxu + "Ztratil jsi " + ztrataPozic + " pozic a seš na " + StavHrace.aktualniPozice + " místě\n";
+            zpravaZBoxu = zpravaZBoxu + "Jedeš dál. Napiš příkaz: zrychli, neutral, setri, box";
+
+            return zpravaZBoxu;
         }
         String vystup = "";
         boolean safetyCar = false;
