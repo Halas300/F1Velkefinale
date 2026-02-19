@@ -29,5 +29,15 @@ public class Zavod {
             startText = startText + "Napiš příkaz pro toto kolo: zrychli, neutral, setri, box";
             return startText;
         }
+        String vystup = "";
+        boolean safetyCar = false;
+        if (rand.nextInt(100) < 12) {
+            safetyCar = true;
+        }
+        boolean prsi = false;
+        if (rand.nextInt(100) < 3) {
+            prsi = true;
+        }
+
         }
     }
