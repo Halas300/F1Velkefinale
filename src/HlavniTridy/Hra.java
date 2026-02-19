@@ -3,6 +3,7 @@ package HlavniTridy;
 import PridaneVeci.Mistnosti;
 import Prikazy.*;
 import ZavodniTridy.Kvalifikace;
+import ZavodniTridy.Zavod;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -38,6 +39,10 @@ public class Hra {
             else if (StavHrace.fazeHry == 1) {
                 String vysledekKvalifikace = Kvalifikace.kvalda(vstup);
                 System.out.println(vysledekKvalifikace);
+            }
+            else if (StavHrace.fazeHry == 2) {
+                String vysledekZavodu = Zavod.zavodit(vstup);
+                System.out.println(vysledekZavodu);
             }
         }
     }
