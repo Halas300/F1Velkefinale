@@ -87,4 +87,17 @@ public class Zavod {
             opotrebeni = 5;
             sanceNaPredjeti = 10;
         }
+
+        String zprava = "";
+        if (styl.equals("zrychli")) {
+            opotrebeni = opotrebeni + 5;
+            sanceNaPredjeti = sanceNaPredjeti + 23;
+            zprava = "Jedeš rychle, bacha na pneumatiky";
+        } else if (styl.equals("setri")) {
+            opotrebeni = opotrebeni - 3;
+            sanceNaPredjeti = sanceNaPredjeti - 23;
+            zprava = "Šetříš gumy.";
+        } else {
+            zprava = "Stabilní tempo.";
+        }
     }
