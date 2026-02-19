@@ -1,6 +1,7 @@
 package ZavodniTridy;
 import java.util.Random;
 import HlavniTridy.StavHrace;
+import HlavniTridy.Hra;
 
 public class Zavod {
     public static String zavodit (String vstup) {
@@ -37,6 +38,26 @@ public class Zavod {
         boolean prsi = false;
         if (rand.nextInt(100) < 3) {
             prsi = true;
+        }
+
+        vystup = vystup + " kolo " + StavHrace.aktualniKolo + "/20 \n";
+        if (prsi && !StavHrace.aktualniPneu.equals("WET")) {
+            vystup = vystup + "Začalo pršt, Okamžitě jed do boxu pro pneu do mokra\n";
+        }
+        if (safetyCar) {
+            vystup = vystup + "Safty car, ted je zákaz předjíždění (ideální doba pro pit stop).\n";
+        }
+        if (StavHrace.zivotnostPneu <= 0) {
+            return vystup + "Guma explodovala kvůli opotřebovanosti. Nedojel jsi a prohrál si souboj o titul";
+            System.exit(0);
+        }
+
+        if (StavHrace.aktualniKolo == 20) {
+            if (StavHrace.aktualniPozice == 1) {
+                return vystup + "\n Dokázal si to, si mistr světa";
+            } else {
+                return vystup + "\n Jsi v cíli, dojel jsi na " + StavHrace.aktualniPozice + ". místě.\nMax vyhrál titul. Prohrál jsi souboj o titul.";
+            }
         }
 
         }
