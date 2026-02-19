@@ -66,4 +66,25 @@ public class Zavod {
         return vystup;
 
         }
+    private static String odjetiKola(String styl, boolean sc, boolean prsi) {
+        if (prsi && !StavHrace.aktualniPneu.equals("WET")) {
+            StavHrace.aktualniPozice = StavHrace.aktualniPozice + 3;
+            return "Na vodě jsi ztratil kontrolu, Propad o 3 místa.";
+        }
+        int opotrebeni = 0;
+        int sanceNaPredjeti = 0;
+
+        if (StavHrace.aktualniPneu.equals("SOFT")) {
+            opotrebeni = 10;
+            sanceNaPredjeti = 20;
+        } else if (StavHrace.aktualniPneu.equals("MEDIUM")) {
+            opotrebeni = 7;
+            sanceNaPredjeti = 10;
+        } else if (StavHrace.aktualniPneu.equals("HARD")) {
+            opotrebeni = 5;
+            sanceNaPredjeti = 0;
+        } else if (StavHrace.aktualniPneu.equals("WET")) {
+            opotrebeni = 5;
+            sanceNaPredjeti = 10;
+        }
     }
