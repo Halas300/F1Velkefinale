@@ -22,5 +22,6 @@ public class StavHrace {
     public static String aktualniPneu = "";
     public static int zivotnostPneu = 100;
     public static int aktualniKolo = 0;
+    public static boolean vBoxech = false;
 
 }

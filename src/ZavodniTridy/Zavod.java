@@ -50,6 +50,14 @@ public class Zavod {
         if (StavHrace.zivotnostPneu <= 0) {
             return vystup + "Guma explodovala kvůli opotřebovanosti. Nedojel jsi a prohrál si souboj o titul";
         }
+        if (akce.equals("box")) {
+            StavHrace.vBoxech = true;
+            StavHrace.aktualniKolo = StavHrace.aktualniKolo + 1;
+            return vystup + "Zajíždíš do boxů \nNapiš jaké pneu chceš nasadit: SOFT, MEDIUM, HARD nebo WET";
+        }
+        else {
+            vystup = vystup + odjetiKola(akce, safetyCar, prsi);
+        }
 
         if (StavHrace.aktualniKolo == 20) {
             if (StavHrace.aktualniPozice == 1) {
