@@ -105,4 +105,21 @@ public class Zavod {
             sanceNaPredjeti = -1000;
             zprava = "Kroužení za SC.";
         }
+
+        StavHrace.zivotnostPneu = StavHrace.zivotnostPneu - opotrebeni;
+        Random random = new Random();
+        int nahoda = random.nextInt(100);
+        if (sanceNaPredjeti > 0 && nahoda < sanceNaPredjeti) {
+            if (StavHrace.aktualniPozice > 1) {
+                StavHrace.aktualniPozice = StavHrace.aktualniPozice - 1;
+                return zprava + " Předjel si soupeře";
+            }
+        }
+        if (sanceNaPredjeti < 0 || nahoda > (100 - opotrebeni)) {
+            StavHrace.aktualniPozice = StavHrace.aktualniPozice + 1;
+            return zprava + " Soupeř tě předjel";
+        }
+
+        return zprava + " Pozice se nemění";
+    }
     }
