@@ -100,4 +100,9 @@ public class Zavod {
         } else {
             zprava = "Stabilní tempo.";
         }
+        if (sc) {
+            opotrebeni = 1;
+            sanceNaPredjeti = -1000;
+            zprava = "Kroužení za SC.";
+        }
     }
