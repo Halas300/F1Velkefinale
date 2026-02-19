@@ -21,5 +21,13 @@ public class Zavod {
                 default:
                     return "Neplatná volba. Napiš SOFT, MEDIUM nebo HARD.";
             }
+            StavHrace.zivotnostPneu = 100;
+            StavHrace.aktualniKolo = 1;
+            String startText = "Pneu vybrány: " + StavHrace.aktualniPneu + "\n";
+            startText = startText + "Ted už jsme připraveni závodit\n";
+            startText = startText + "Závod právě odstartoval...";
+            startText = startText + "Napiš příkaz pro toto kolo: zrychli, neutral, setri, box";
+            return startText;
+        }
         }
     }
