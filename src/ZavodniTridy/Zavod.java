@@ -30,6 +30,29 @@ public class Zavod {
             startText = startText + "Napiš příkaz pro toto kolo: zrychli, neutral, setri, box";
             return startText;
         }
+        if (StavHrace.vBoxech) {
+            String volba = akce.trim().toLowerCase();
+            switch (volba) {
+                case "soft":
+                    StavHrace.aktualniPneu = "SOFT";
+                    break;
+
+                case "medium":
+                    StavHrace.aktualniPneu = "MEDIUM";
+                    break;
+
+                case "hard":
+                    StavHrace.aktualniPneu = "HARD";
+                    break;
+
+                case "wet":
+                    StavHrace.aktualniPneu = "WET";
+                    break;
+
+                default:
+                    return "Napiš prosím SOFT, MEDIUM, HARD nebo WET";
+            }
+        }
         String vystup = "";
         boolean safetyCar = false;
         if (rand.nextInt(100) < 12) {
