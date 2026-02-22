@@ -5,7 +5,7 @@
 * Napínavý příběh před posledním závodem o titul
 * Opravování auta, rozhovory s inženýrem a ladění strategie
 * Vlastní kvalifikace (kvíz) a strategický závod na 20 kol
-* Dynamické počasí a safety car
+* Dynamické počasí a safety car!
 
 ### O hře
 Hrajete za jezdce, který má před úplně posledním závodem sezony v Abu Dhabí naprosto stejný počet bodů jako jeho největší rival Max. Vaším úkolem je připravit auto v garáži, projít kvalifikací a pak samotný závod vyhrát a získat titul mistra světa.
@@ -56,4 +56,4 @@ V každém kole pak volíte tempo: `zrychli`, `neutral`, `setri` nebo `box` pro 
 
 Stáhnete soubor `.jar`, tak ho většinou stačí jen dvakrát prokliknout (pokud máte nainstalovanou Javu). Kdyby to nešlo, stačí si otevřít terminál nebo příkazovou řádku ve složce, kde soubor leží, a napsat tenhle příkaz:
 
-java -jar nazev_souboru.jar
+java -jar nazev_souboru.jar  
