@@ -56,4 +56,4 @@ V každém kole pak volíte tempo: `zrychli`, `neutral`, `setri` nebo `box` pro 
 
 Stáhnete soubor `.jar`, tak ho většinou stačí jen dvakrát prokliknout (pokud máte nainstalovanou Javu). Kdyby to nešlo, stačí si otevřít terminál nebo příkazovou řádku ve složce, kde soubor leží, a napsat tenhle příkaz:
 
-java -jar nazev_souboru.jar  
+java -jar nazev_souboru.jar   
