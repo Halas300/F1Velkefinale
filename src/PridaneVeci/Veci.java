@@ -14,6 +14,13 @@ public class Veci {
         return nazev;
     }
 
+    public Veci(String id, String nazev, String typ, String popis) {
+        this.id = id;
+        this.nazev = nazev;
+        this.typ = typ;
+        this.popis = popis;
+    }
+
     public String getTyp() {
         return typ;
     }
@@ -21,4 +28,5 @@ public class Veci {
     public String getPopis() {
         return popis;
     }
+
 }
