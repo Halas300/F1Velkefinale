@@ -26,4 +26,12 @@ public class NPC {
     public String getPoznamky() {
         return poznamky;
     }
+
+    public NPC(String id, String jmeno, String role, String domovskaLokace, String poznamky) {
+        this.id = id;
+        this.jmeno = jmeno;
+        this.role = role;
+        this.domovskaLokace = domovskaLokace;
+        this.poznamky = poznamky;
+    }
 }

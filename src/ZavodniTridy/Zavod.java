@@ -64,7 +64,7 @@ public class Zavod {
         }
         String vystup = "";
         boolean safetyCar = false;
-        if (rand.nextInt(100) < 12) {
+        if (rand.nextInt(100) < 16) {
             safetyCar = true;
         }
         boolean prsi = false;
@@ -119,23 +119,23 @@ public class Zavod {
             sanceNaPredjeti = 20;
         } else if (StavHrace.aktualniPneu.equals("MEDIUM")) {
             opotrebeni = 7;
-            sanceNaPredjeti = 10;
+            sanceNaPredjeti = 14;
         } else if (StavHrace.aktualniPneu.equals("HARD")) {
             opotrebeni = 5;
-            sanceNaPredjeti = 0;
+            sanceNaPredjeti = 10;
         } else if (StavHrace.aktualniPneu.equals("WET")) {
             opotrebeni = 5;
-            sanceNaPredjeti = 10;
+            sanceNaPredjeti = 16;
         }
 
         String zprava = "";
         if (styl.equals("zrychli")) {
-            opotrebeni = opotrebeni + 5;
-            sanceNaPredjeti = sanceNaPredjeti + 23;
+            opotrebeni = opotrebeni + 6;
+            sanceNaPredjeti = sanceNaPredjeti + 20;
             zprava = "Jedeš rychle, bacha na pneumatiky";
         } else if (styl.equals("setri")) {
-            opotrebeni = opotrebeni - 3;
-            sanceNaPredjeti = sanceNaPredjeti - 23;
+            opotrebeni = opotrebeni - 6;
+            sanceNaPredjeti = sanceNaPredjeti - 20;
             zprava = "Šetříš gumy.";
         } else {
             zprava = "Stabilní tempo.";
