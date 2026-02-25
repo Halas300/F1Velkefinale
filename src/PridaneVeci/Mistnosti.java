@@ -19,4 +19,12 @@ public class Mistnosti {
     public String getPopis(){
         return popis;
     }
+
+    public Mistnosti(String id, String nazev, String popis, ArrayList<String> soused, ArrayList<String> veciVMistnosti) {
+        this.id = id;
+        this.nazev = nazev;
+        this.popis = popis;
+        this.soused = soused;
+        this.veciVMistnosti = veciVMistnosti;
+    }
 }
