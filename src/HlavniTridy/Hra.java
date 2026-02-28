@@ -12,7 +12,7 @@ public class Hra {
     public static Mistnosti aktualniLokace;
     public static GameData data;
     private ArrayList<Prikaz> seznamPrikazu = new ArrayList<>();
-    boolean konec = false;
+    public static boolean konec = false;
 
     public void start() {
         try {
@@ -58,6 +58,10 @@ public class Hra {
         seznamPrikazu.add(new PrikazPouzij());
         seznamPrikazu.add(new PrikazProzkoumej());
         seznamPrikazu.add(new PrikazZahod());
+    }
+
+    public static void ukonciHru() {
+        konec = true;
     }
 
     private void zpracujPrikaz(String radek) {

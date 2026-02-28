@@ -80,6 +80,7 @@ public class Zavod {
             vystup = vystup + "Safty car, ted je zákaz předjíždění (ideální doba pro pit stop).\n";
         }
         if (StavHrace.zivotnostPneu <= 0) {
+            Hra.ukonciHru();
             return vystup + "Guma explodovala kvůli opotřebovanosti. Nedojel jsi a prohrál si souboj o titul";
         }
         if (akce.equals("box")) {
@@ -93,6 +94,7 @@ public class Zavod {
 
         if (StavHrace.aktualniKolo == 20) {
             if (StavHrace.aktualniPozice == 1) {
+                Hra.ukonciHru();
                 return vystup + "\n Dokázal si to, si mistr světa";
             } else {
                 return vystup + "\n Jsi v cíli, dojel jsi na " + StavHrace.aktualniPozice + ". místě.\nMax vyhrál titul. Prohrál jsi souboj o titul.";
