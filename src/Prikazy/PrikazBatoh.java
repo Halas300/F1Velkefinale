@@ -3,6 +3,9 @@ package Prikazy;
 import HlavniTridy.StavHrace;
 import PridaneVeci.Veci;
 
+/**
+ * Příkaz pro vypsání obsahu batohu hráče.
+ */
 public class PrikazBatoh implements Prikaz {
 
     @Override

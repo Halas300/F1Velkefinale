@@ -5,6 +5,10 @@ import HlavniTridy.StavHrace;
 import PridaneVeci.Mistnosti;
 import PridaneVeci.Veci;
 
+/**
+ * Příkaz pro přesun do jiné lokace.
+ * Obsahuje i logiku pro kontrolu podmínek při vstupu do Pit Lane.
+ */
 public class PrikazJdi implements Prikaz {
 
     @Override

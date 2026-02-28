@@ -3,6 +3,9 @@ import HlavniTridy.Hra;
 import PridaneVeci.NPC;
 import PridaneVeci.Veci;
 
+/**
+ * Příkaz pro vypsání informací o aktuální místnosti, věcech v ní a postavách.
+ */
 public class PrikazProzkoumej implements Prikaz {
     @Override
     public String getNazev() {

@@ -1,7 +1,13 @@
 package HlavniTridy;
 
+/**
+ * Třída, která řídí rozhovory s postavami.
+ */
 public class Rozhovor {
 
+    /**
+     * Zpracuje odpověď hráče podle toho, s kým právě mluví.
+     */
     public static String zpracujOdpoved(String odpovedHrace) {
         if (StavHrace.sKymMluvim.equals("Sarah")) {
             return zpracujSarah(odpovedHrace);
@@ -16,6 +22,9 @@ public class Rozhovor {
         return "Chyba: Nevím s kým mluvíš.";
     }
 
+    /**
+     * Obsluhuje logiku povinného rozhovoru se Sarah.
+     */
         private static String zpracujSarah(String odpovedHrace) {
         if (StavHrace.cisloOtazky == 0) {
             if (odpovedHrace.toLowerCase().equals("ano")) {
@@ -58,6 +67,9 @@ public class Rozhovor {
         return "Chyba v rozhovoru.";
     }
 
+    /**
+     * Obsluhuje logiku rozhovoru s Maxem.
+     */
     private static String zpracujMaxe(String odpovedHrace) {
         String volba = odpovedHrace.toUpperCase();
 
@@ -91,6 +103,9 @@ public class Rozhovor {
         return "Chyba u Maxe.";
     }
 
+    /**
+     * Obsluhuje logiku rozhovoru s Christianem.
+     */
     private static String zpracujChristiana(String odpovedHrace) {
         String volba = odpovedHrace.toUpperCase();
 

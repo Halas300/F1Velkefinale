@@ -1,6 +1,9 @@
 package Prikazy;
 import HlavniTridy.TextoveData;
 
+/**
+ * Příkaz pro zobrazení mapy z textového souboru.
+ */
 public class PrikazMapa implements Prikaz {
 
     @Override

@@ -3,6 +3,10 @@ package HlavniTridy;
 import PridaneVeci.Veci;
 import java.util.ArrayList;
 
+/**
+ * Třída pro ukládání stavu hráče a průběhu hry.
+ * Jsou tu uloženy různé důležité proměnné
+ */
 public class StavHrace {
     public static ArrayList<Veci> batoh = new ArrayList<>();
     public static final int KapacitaBatohu = 4;

@@ -1,6 +1,9 @@
 package PridaneVeci;
 import java.util.ArrayList;
 
+/**
+ * Třída pro místnosti
+ */
 public class Mistnosti {
     private String id;
     private String nazev;

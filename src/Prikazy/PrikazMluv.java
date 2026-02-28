@@ -3,6 +3,9 @@ import HlavniTridy.Hra;
 import PridaneVeci.NPC;
 import HlavniTridy.StavHrace;
 
+/**
+ * Příkaz pro spuštění dialogu s postavami v místnosti + dialog s jamesem.
+ */
 public class PrikazMluv implements Prikaz {
 
     @Override

@@ -1,5 +1,8 @@
 package PridaneVeci;
 
+/**
+ * Třída pro postavy
+ */
 public class NPC {
     private String id;
     private String jmeno;

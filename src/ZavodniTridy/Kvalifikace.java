@@ -1,6 +1,10 @@
 package ZavodniTridy;
 import HlavniTridy.StavHrace;
 
+/**
+ * Třída pro kvalifikaci před závodem.
+ * Podle odpovědí určuje startovní pozici.
+ */
 public class Kvalifikace {
     private static String[][] otazky = {
             {
@@ -74,6 +78,9 @@ public class Kvalifikace {
                     "1"
             }
     };
+        /**
+         * Zpracovává odpovědi hráče v průběhu kvalifikace.
+         */
         public static String kvalda(String vstup) {
                 if (StavHrace.aktualniKoloOtazka == -1) {
                         StavHrace.aktualniKoloOtazka = 0;
@@ -117,7 +124,9 @@ public class Kvalifikace {
 
                 return vypisOtazky(StavHrace.aktualniKoloOtazka);
         }
-
+        /**
+         * Pomocná metoda pro vypsání otázky
+         */
         private static String vypisOtazky(int index) {
                 String text = " Otázka " + (index + 1) + ": " + otazky[index][0] + "\n";
                 text = text + "A) " + otazky[index][1] + "\n";

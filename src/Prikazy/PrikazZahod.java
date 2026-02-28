@@ -3,6 +3,9 @@ import HlavniTridy.Hra;
 import HlavniTridy.StavHrace;
 import PridaneVeci.Veci;
 
+/**
+ * Příkaz pro vyhození předmětu z batohu
+ */
 public class PrikazZahod implements Prikaz{
     @Override
     public String getNazev() {

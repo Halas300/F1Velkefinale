@@ -4,16 +4,21 @@ import PridaneVeci.Mistnosti;
 import Prikazy.*;
 import ZavodniTridy.Kvalifikace;
 import ZavodniTridy.Zavod;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Hlavní třída hry, načítá data a zpracovává příkazy hráče.
+ */
 public class Hra {
     public static Mistnosti aktualniLokace;
     public static GameData data;
     private ArrayList<Prikaz> seznamPrikazu = new ArrayList<>();
     public static boolean konec = false;
 
+    /**
+     * Metoda, která odstartuje celou hru. Načte data, uvítá hráče a spustí hru.
+     */
     public void start() {
         try {
             data = GameData.nactiData("/gamedata.json");
@@ -47,6 +52,9 @@ public class Hra {
         }
     }
 
+    /**
+     * Přidává seznam všech příkazů.
+     */
     private void zacniPrikazy() {
         seznamPrikazu.add(new PrikazJdi());
         seznamPrikazu.add(new PrikazNapoveda());
@@ -60,10 +68,16 @@ public class Hra {
         seznamPrikazu.add(new PrikazZahod());
     }
 
+    /**
+     * Pro ukončení hry
+     */
     public static void ukonciHru() {
         konec = true;
     }
 
+    /**
+     * Zpracuje textový vstup od hráče a najde požadovaný příkaz.
+     */
     private void zpracujPrikaz(String radek) {
         if (StavHrace.probihaRozhovor) {
             String odpovedSarah = Rozhovor.zpracujOdpoved(radek.trim());

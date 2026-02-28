@@ -1,6 +1,9 @@
 package Prikazy;
 import HlavniTridy.TextoveData;
 
+/**
+ * Příkaz pro zobrazení nápovědy k herním příkazům.
+ */
 public class PrikazNapoveda implements Prikaz {
 
     @Override

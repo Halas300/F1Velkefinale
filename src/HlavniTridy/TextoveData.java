@@ -5,8 +5,14 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Collectors;
 
+/**
+ * Třída pro načítání textových souborů (úvod a mapa hry).
+ */
 public class TextoveData {
 
+    /**
+     * Načte text z textového souboru z resources.
+     */
     public static String nactiText(String cestaKSouboru) {
         try (InputStream is = TextoveData.class.getResourceAsStream(cestaKSouboru)) {
             if (is == null) {

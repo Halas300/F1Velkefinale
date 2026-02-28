@@ -3,6 +3,9 @@ import HlavniTridy.Hra;
 import HlavniTridy.StavHrace;
 import PridaneVeci.Veci;
 
+/**
+ * Příkaz pro použití předmětu.
+ */
 public class PrikazPouzij implements Prikaz {
 
     @Override

@@ -9,11 +9,18 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
+/**
+ * Třída má herní data načtená z JSON souboru.
+ * Obsahuje seznamy věcí, postav a místností.
+ */
 public class GameData {
     public ArrayList<Veci> Veci;
     public ArrayList<NPC> NPC;
     public ArrayList<Mistnosti> Mistnosti;
 
+    /**
+     * Načte herní data z JSON souboru.
+     */
     public static GameData nactiData (String resourcePath) {
         Gson gson = new Gson();
         try (InputStream is = GameData.class.getResourceAsStream(resourcePath)) {
@@ -26,6 +33,9 @@ public class GameData {
         }
     }
 
+    /**
+     * Najde místnost podle jejího unikátního ID.
+     */
     public Mistnosti najdiMistnost(String id) {
         for (Mistnosti l : Mistnosti) {
             if (l.getId().equals(id)) {
@@ -35,6 +45,9 @@ public class GameData {
         return null;
     }
 
+    /**
+     * Najde věc podle jejího unikátního ID.
+     */
     public Veci NajdiVec(String id) {
         for (Veci i : Veci) {
             if (i.getId().equals(id)) return i;

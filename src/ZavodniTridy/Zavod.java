@@ -3,7 +3,14 @@ import java.util.Random;
 import HlavniTridy.StavHrace;
 import HlavniTridy.Hra;
 
+/**
+ * Třída řešící celou logiku závodu
+ */
 public class Zavod {
+    /**
+     * Zpracovává hlavní logiku v každém kole závodu podle akce hráče
+     * Řeší pneumatiky, box, safty car, déšt a také zavěr hry
+     */
     public static String zavodit (String vstup) {
         String akce = vstup.toLowerCase();
         Random rand = new Random();
@@ -108,6 +115,10 @@ public class Zavod {
         return vystup;
 
         }
+    /**
+     * Pro výpočet opotřebení pneu
+     * Obsahuje také šance na předjetí a ztrátu pozice
+     */
     private static String odjetiKola(String styl, boolean sc, boolean prsi) {
         if (prsi && !StavHrace.aktualniPneu.equals("WET")) {
             StavHrace.aktualniPozice = StavHrace.aktualniPozice + 3;

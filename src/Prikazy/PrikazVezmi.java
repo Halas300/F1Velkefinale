@@ -4,6 +4,9 @@ import HlavniTridy.Hra;
 import HlavniTridy.StavHrace;
 import PridaneVeci.Veci;
 
+/**
+ * Příkaz pro sebrání předmětů.
+ */
 public class PrikazVezmi implements Prikaz {
 
     @Override

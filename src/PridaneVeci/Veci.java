@@ -1,5 +1,8 @@
 package PridaneVeci;
 
+/**
+ * Třída pro věci
+ */
 public class Veci {
     private String id;
     private String nazev;

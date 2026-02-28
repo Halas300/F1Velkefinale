@@ -1,6 +1,9 @@
 package Prikazy;
 import HlavniTridy.StavHrace;
 
+/**
+ * Příkaz pro nastavení křídla.
+ */
 public class PrikazNastav implements Prikaz {
 
     @Override
